@@ -1,0 +1,23 @@
+{
+  "name": "gists",
+  "version": "1.0.0",
+  "description": "gists",
+  "main": "server.js",
+  "dependencies": {
+    "css-mqpacker": "^7.0.0",
+    "sass": "^1.26.10",
+    "sergey": "0.0.13"
+  },
+  "scripts": {
+    "dev": "npm run sass && sergey --watch --port=8200 --exclude=.vscode,*.conf,src,deploy",
+    "build": "npm run sass && npm run mqpacker && sergey --exclude=.vscode,*.conf,src,deploy",
+    "netlify": "netlify deploy --prod -d public",
+    "sass": "sass --no-source-map src/style.scss files/style.css",
+    "mqpacker": "mqpacker -s ./files/style.css ./files/style.css",
+    "build:css": "npm run sass && npm run mqpacker",
+    "start": "sergey",
+    "go": "npm run dev & npm run sass"
+  },
+  "author": "gareth",
+  "license": "ISC"
+}

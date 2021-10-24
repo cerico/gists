@@ -1,0 +1,41 @@
+body {
+  font: 100% "Raleway";
+  background: #db5439;
+}
+
+.entry {
+  background: #f5f3e8;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 4vw;
+}
+
+.copy {
+  column-count: 1;
+  column-gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+h2 {
+  column-span: all;
+  font-size: 1.375rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1.25rem;
+  margin-bottom: 1em;
+}
+
+img {
+  width: 100%;
+}
+
+em {
+  color: #db5439;
+}
