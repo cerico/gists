@@ -1,0 +1,17 @@
+---
+- name: Prepare
+  hosts: localhost
+  connection: local 
+  tasks:
+    - name: register friendly date
+      shell: "date | awk -F' ' '{print $2,$3,$4}'"
+      register: friendly_date
+    - name: register entries
+      shell: "ls {{ playbook_dir }}/_imports/sections | wc -l" 
+      register: number
+    - name: create entries
+      template:
+        src: post.md.j2
+        dest: "{{ playbook_dir }}/_imports/sections/{{ (number.stdout|int) + 1}}.html"
+    - name: printing variable with adding some extra message
+      debug: msg="Please edit {{ playbook_dir }}/_imports/sections/{{ (number.stdout|int) + 1}}.html"
