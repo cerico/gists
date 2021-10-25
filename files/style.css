@@ -1,6 +1,7 @@
 body {
   font: 100% "Raleway";
   background: #db5439;
+  margin: 8px;
 }
 
 .entry {
@@ -38,4 +39,38 @@ img {
 
 em {
   color: #db5439;
+}
+
+.wrapper {
+  background: #f5f3e8;
+  display: grid;
+  grid-gap: 0px;
+  grid-template-columns: 1fr 4fr 2fr;
+  color: #444;
+}
+
+.box {
+  padding: 20px;
+  text-align: center;
+  background-color: #1e1e1e;
+  color: #f5f3e8;
+}
+
+.a {
+  background-color: #eebe6d;
+}
+
+.c {
+  text-align: right;
+}
+
+.num {
+  color: #db5439;
+  font-size: 8rem;
+  font-style: normal;
+  line-height: 0.8;
+}
+
+.divider {
+  border-bottom: 0px solid #db5439;
 }
