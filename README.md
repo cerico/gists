@@ -24,5 +24,6 @@ make create
 git push origin main
 ```
 
-TODO
+## TODO
+
 [ ] Migrate to Astro
